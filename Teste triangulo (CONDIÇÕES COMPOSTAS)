@@ -1,0 +1,27 @@
+algoritmo "CUSTO DE VIAGEM"
+var
+   x, y, z: real
+inicio
+   Escreva("Primeiro lado: ")
+   leia (x)
+   Escreva("Segundo lado: ")
+   leia (y)
+   Escreva("Terceiro lado: ")
+   leia (z)
+   Se (x < y+z) e (y < x+z) e (z < x+y) entao
+      EscrevaL("Podemos formar um triangulo com essas medidas ")
+      Se (x = y) e (y = z) entao
+         EscrevaL("E esse triangulo é EQUILATERO")
+      Senao
+         Se (x <> y) e (y <> z) e (z <> x) entao
+            Escreva ("E esse triangulo é ESCALENO")
+         Senao
+            Se (x = z) ou (z = y) ou (z = x) entao
+               Escreva("Esse triangulo é ISÓCELES")
+            FimSe
+         FimSe
+      FimSe
+      Senao
+   EscrevaL("Não é possivel formar um triangulo com essas medidas ")
+   FimSe
+fimalgoritmo
