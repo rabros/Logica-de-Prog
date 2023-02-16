@@ -1,0 +1,15 @@
+algoritmo "TEMPO PERDIDO DE FUMANTE"
+var
+   idade, cigarro, total_cigarro: inteiro
+   tempo_min, tempo_hora, tempo_dia: real
+inicio
+   EscrevaL("A quantos anos você fuma? ")
+   Leia (idade)
+   EscrevaL("Quantos cigarros você fumou por dia? ")
+   Leia (cigarro)
+   total_cigarro <- cigarro * (idade * 365)
+   tempo_min <- total_cigarro * 10
+   tempo_hora <- tempo_min / 60
+   tempo_dia <- tempo_hora / 24
+   Escreva(" Você perdeu ", tempo_dia:4:1, " dias da sua vida por conta do cigarro!!")
+fimalgoritmo
