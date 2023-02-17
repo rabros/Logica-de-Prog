@@ -1,0 +1,22 @@
+algoritmo "CONTAGEM INTELIGENTE"
+var
+   i, f, cont: inteiro
+inicio
+      Escreva("INICIO: ")
+      Leia (i)
+      Escreva("FIM: ")
+      leia (f)
+      Se i > f entao
+         cont <- i
+         enquanto cont >= f faca
+            Escreva (cont,"...")
+            cont <- cont - 1
+         Fimenquanto
+      Senao
+         cont <- f
+         enquanto cont >= i faca
+            Escreva (cont,"...")
+            cont <- cont - 1
+         Fimenquanto
+      FimSe
+fimalgoritmo
