@@ -1,14 +1,19 @@
 algoritmo "SOMADOR"
 var
-   soma, cont, num: inteiro
+   soma, cont, num, maior: inteiro
 inicio
    cont <- 1
    soma <- 0
+   maior <- 0
    enquanto (cont <=10) faca
       Escreva("Digite o ", cont, "o. valor: ")
       Leia (num)
+      Se num >= maior entao
+         maior <- num
+      FimSe
       soma <- soma + num
       cont <- cont + 1
    FimEnquanto
-   Escreva("A soma de todos os numeros digitados é: ", soma)
+   EscrevaL("A soma de todos os numeros digitados é: ", soma)
+   EscrevaL("O maior numero digitado é: ", maior)
 fimalgoritmo
