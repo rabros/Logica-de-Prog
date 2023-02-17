@@ -1,0 +1,14 @@
+algoritmo "SOMADOR"
+var
+   soma, cont, num: inteiro
+inicio
+   cont <- 1
+   soma <- 0
+   enquanto (cont <=10) faca
+      Escreva("Digite o ", cont, "o. valor: ")
+      Leia (num)
+      soma <- soma + num
+      cont <- cont + 1
+   FimEnquanto
+   Escreva("A soma de todos os numeros digitados é: ", soma)
+fimalgoritmo
