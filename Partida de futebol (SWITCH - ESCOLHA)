@@ -1,0 +1,27 @@
+algoritmo "PARTIDA DE FUTEBOL"
+var
+   dif, x, y: inteiro
+   time1, time2: caractere
+inicio
+      escreva(" Time 1: ")
+      leia (time1)
+      escreva(" Time 2: ")
+      leia (time2)
+      escrevaL(time1, " X ", time2)
+      escreva(" Quantos gols ", time1, " fez? ")
+      leia (x)
+      escreva(" Quantos gols ", time2, " fez? ")
+      leia (y)
+      dif <- abs (x-y)
+      escrevaL("---------------------")
+      escrevaL("DIFERENÇA: ", dif)
+      escolha dif
+             caso 0
+             escreva("EMPATE")
+             caso 1,2,3
+             escreva("PARTIDA NORMAL")
+             outrocaso
+             escreva("GOLEADA")
+      FimEscolha
+      
+fimalgoritmo
