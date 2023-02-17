@@ -1,0 +1,46 @@
+algoritmo "APROVADO OU REPROVADO"
+var
+   N1, N2, MEDIA: REAL
+inicio
+   EscrevaL ("---------------------")
+   EscrevaL ("ESCOLA DO RABROS")
+   EscrevaL ("---------------------")
+   EscrevaL ("Digite nota 1: ")
+   Leia (n1)
+   EscrevaL ("Digite nota 2: ")
+   Leia (n2)
+   MEDIA <- (n1 + n2) / 2
+   Se (MEDIA <= 10) e (MEDIA >= 9) entao
+      EscrevaL ("---------------------")
+      EscrevaL("MEDIA: ", MEDIA)
+      EscrevaL("DESEMPENHO A")
+   Senao
+        Se (MEDIA <= 8) e (MEDIA >= 7) entao
+          EscrevaL ("---------------------")
+          EscrevaL("MEDIA: ", MEDIA)
+          EscrevaL("DESEMPENHO B")
+        Senao
+             Se (MEDIA <= 6) e (MEDIA >= 5) entao
+               EscrevaL ("---------------------")
+               EscrevaL("MEDIA: ", MEDIA)
+               EscrevaL("DESEMPENHO C")
+             Senao
+                  Se (MEDIA <= 4) e (MEDIA >= 3) entao
+                     EscrevaL ("---------------------")
+                     EscrevaL("MEDIA: ", MEDIA)
+                     EscrevaL("DESEMPENHO D")
+                  Senao
+                       Se (MEDIA <= 4) e (MEDIA >= 3) entao
+                          EscrevaL ("---------------------")
+                          EscrevaL("MEDIA: ", MEDIA)
+                          EscrevaL("DESEMPENHO D")
+                     Senao
+                          EscrevaL ("---------------------")
+                          EscrevaL("MEDIA: ", MEDIA)
+                          EscrevaL("REPROVADO")
+                     FimSe
+                  FimSe
+             FimSe
+        FimSe
+   FimSe
+fimalgoritmo
