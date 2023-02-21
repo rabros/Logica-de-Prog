@@ -1,0 +1,15 @@
+algoritmo "SOMADOR"
+var
+   soma, num: inteiro
+   resp: caractere
+inicio
+   soma <- 0
+   repita
+      Escreva("Digite o valor: ")
+      leia (num)
+      soma <- soma + num
+      EscrevaL("Quer continuar a somar? {S/N]")
+      leia (resp)
+   Até (resp = "N") OU (resp = "n")
+   EscrevaL("A soma de todos os numeros digitados é: ", soma)
+fimalgoritmo
