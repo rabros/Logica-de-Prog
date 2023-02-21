@@ -1,4 +1,4 @@
-algoritmo "semnome"
+algoritmo "FATORIAL"
 var
    N, C, P: INTEIRO
 inicio
