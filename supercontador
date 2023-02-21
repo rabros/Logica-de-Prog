@@ -1,0 +1,27 @@
+algoritmo "SUPER CONTADOR"
+var
+   n, c: INTEIRO
+inIcio
+   repita
+      EscrevaL ("Digite [1] - 1 a 10")
+      EscrevaL ("Digite [2] - 10 a 1")
+      EscrevaL ("Digite [3] - sair")
+      leia (n)
+      c <- 1
+
+        escolha n
+         caso 1
+           enquanto c <= 10 faca
+            escreva (c)
+            c <- c + 1
+           fimenquanto
+         caso 2
+         c <- 10
+           enquanto c > 0 faca
+            escreva (c)
+            c <- c - 1
+           fimenquanto
+         fimescolha
+         EscrevaL ()
+   até (n = 3)
+fimalgoritmo
