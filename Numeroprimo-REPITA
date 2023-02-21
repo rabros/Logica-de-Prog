@@ -1,0 +1,22 @@
+algoritmo "NUMERO PRIMO"
+var
+    N, C, ContDiv: INTEIRO
+inicio
+    Escreva ("Digite um número: ")
+    leia (N)
+    C <- 1
+
+    Repita
+        Se (N % C = 0) entao
+            ContDiv <- ContDiv + 1
+        FimSe
+        C <- C + 1
+    Até (C > N)
+    Se ContDiv = 2 entao
+        EscrevaL ("Quantidade de divisores é ", ContDiv)
+        EscrevaL ("o numero", N, " é primo!")
+    senao
+        EscrevaL ("Quantidade de divisores é ", ContDiv)
+        EscrevaL ("o numero", N, " não é primo!")
+    FimSe
+fimalgoritmo
