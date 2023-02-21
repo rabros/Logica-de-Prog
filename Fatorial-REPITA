@@ -1,0 +1,14 @@
+algoritmo "semnome"
+var
+   N, C, P: INTEIRO
+inicio
+      Escreva("Qual numero você quer saber o fatorial? ")
+      leia (N)
+      C <- N
+      P <- 1
+      repita
+            P <- P * C
+            C <- C - 1
+      ate (C < 1)
+      escreva (P)
+fimalgoritmo
