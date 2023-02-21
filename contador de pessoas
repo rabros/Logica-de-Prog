@@ -1,0 +1,44 @@
+algoritmo "semnome"
+var
+      cor, genero, resp: caractere
+      idade, cont_masc, cont_fem: inteiro
+inicio
+
+   repita
+      escreva ("Voce é do genero [F/M]: ")
+      leia (genero)
+      escreva ("qual sua idade? ")
+      leia (idade)
+      escreval ("qual a cor do seu cabelo: ")
+      escrevaL ("[1] MARROM")
+      escrevaL ("[2] CASTANHO")
+      escrevaL ("[3] LOIRO")
+      escrevaL ("[4] PRETO")
+      leia (cor)
+      escolha cor
+         caso "1"
+         cor <- "MARROM"
+         caso "2"
+         cor <- "CASTANHO"
+         caso "3"
+         cor <- "LOIRO"
+         caso "4"
+         cor <- "PRETO"
+      fimescolha
+      se  (genero = "M") entao
+         se (idade >= 18) entao
+            se (cor = "CASTANHO") entao
+               cont_masc <- cont_masc + 1
+            fimse
+         fimse
+      fimse
+      se (genero = "F") e (idade >= 25) e (idade <= 35) e (cor = "LOIRO") entao
+         cont_fem <- cont_fem+ 1
+      fimse
+      escreva("Quer continuar? [S/N] ")
+      leia (resp)
+      Limpatela
+   até (resp = "N")
+      Escreval(cont_masc, " é quantidade homens cadastrados com mais de 18 anos e cabelo castanho")
+      Escreval(cont_fem, " é quantidade mulheres cadastradas de entre 25 e 35 anos e cabelo loiro")
+fimalgoritmo
