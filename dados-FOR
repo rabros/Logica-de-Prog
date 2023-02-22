@@ -1,0 +1,30 @@
+algoritmo "escrevendodados"
+var
+   num, cont, soma, divi5, nul, soma_pares: inteiro
+   media: real
+inicio
+      soma <- 0
+      divi5 <- 0
+      nul <- 0
+      soma_pares <- 0
+      Para cont := 1 ate 5 faca
+         Escreva ("digite ", cont, "o numero: ")
+         leia (num)
+         soma <- soma + num
+         Se (num % 5 = 0) entao
+            divi5 <- divi5 + 1
+         FimSe
+         Se (num = 0) entao
+            nul <- nul + 1
+         FimSe
+         Se (num % 2 = 0) entao
+            soma_pares <- soma_pares + num
+         FimSe
+      FimPara
+      media <- soma / (cont - 1)
+      escreval("Soma de todos os valores é: ", soma)
+      escreval("O quantidade de numero divisiveis por cinvo é: ", divi5)
+      escreval("tem ", nul, " valores nulos nos numeros digitados")
+      escreval("soma dos numeros pares é: ", soma_pares)
+      escreval("a media dos numeros é: ", media:4:2)
+fimalgoritmo
