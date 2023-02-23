@@ -1,0 +1,16 @@
+algoritmo "semnome"
+var
+   N: inteiro
+Procedimento ImparOuPar(V: inteiro)
+Inicio
+   Se (V % 2 = 0) entao
+      Escreva ("O numero ", V, " é PAR")
+   Senao
+      Escreva ("O numero ", V, " é IMPAR")
+   FimSe
+FimProcedimento
+inicio
+   escreva("Digite um  valor: ")
+   leia (N)
+   ImparOuPar(N)
+fimalgoritmo

@@ -1,0 +1,25 @@
+algoritmo "MAIS PESADO"
+var
+   c: inteiro
+   maior, peso: Real
+   nome, pesado: caractere
+Procedimento Topo()
+Inicio
+   Limpatela
+   EscrevaL("O maior peso até agora é ", maior, "Kg")
+FimProcedimento
+inicio
+   Topo()
+   Para c := 1 ate 3 faca
+      Escreva("Digite seu nome: ")
+      leia (nome)
+      escreva("Digite seu peso (KG): ")
+      leia (peso)
+      Se peso > maior entao
+         maior <- peso
+         pesado <- nome
+      FimSe
+      Topo()
+   FimPara
+   Escreva ("o mais pesado é ", pesado, ", com ", maior, "Kg")
+fimalgoritmo
