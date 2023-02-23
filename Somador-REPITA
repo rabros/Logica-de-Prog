@@ -13,3 +13,26 @@ inicio
    Até (resp = "N") OU (resp = "n")
    EscrevaL("A soma de todos os numeros digitados é: ", soma)
 fimalgoritmo
+-------------------------------------------------------------------------------------------------------------------------------------------------
+MESMO CODIGO USANDO FUNÇÃO
+
+algoritmo "SOMADOR DE NUMEROS COM PROCEDIMENTO (FUNÇÃO)"
+var
+   num: inteiro
+   resp: caractere
+   
+Procedimento Soma(var S: inteiro)
+inicio
+   Escreva("digite um numero: ")
+   leia (S)
+   S <- num + S
+FimProcedimento
+
+inicio
+   repita
+      Soma(num)
+      escreva ("Quer continuar? [S/N] ")
+      leia (resp)
+   até (resp = "n") OU (resp = "N")
+   Escreva ("SOMA DOS NUMEROS DIGITADOS É: ", num)
+fimalgoritmo
