@@ -1,0 +1,20 @@
+algoritmo "FATORIAL FUNÇÃO"
+var
+   N, F: inteiro
+
+Funcao Fatorial(P: inteiro): inteiro
+var C, R: inteiro
+Inicio
+   R <- 1
+   Para C:= 1 ate P faca
+      R <- R * C
+   FimPara
+   Retorne R
+FimFuncao
+
+inicio
+   Escreva ("Escreva um numero: ")
+   Leia (N)
+   F <- Fatorial (N)
+   Escreva ("O Fatorial de ", N, "! é ", F)
+fimalgoritmo
