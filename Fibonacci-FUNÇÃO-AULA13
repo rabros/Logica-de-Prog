@@ -1,0 +1,22 @@
+algoritmo "FIBONACCI"
+var
+    T1, T2, T3, C: inteiro
+
+Funcao Fibonacci(var N1, N2: inteiro): inteiro
+var N3: inteiro
+inicio
+    N3 <- N1 + N2
+    N1 <- N2
+    N2 <- N3
+    Retorne (N3)
+FimFuncao
+inicio
+    T1 <- 0
+    EscrevaL (T1)
+    T2 <- 1
+    EscrevaL (T2)
+    para C:= 3 ate 10 faca
+        T3 <- Fibonacci(T1, T2)
+        EscrevaL (T3)
+    FimPara
+fimalgoritmo
