@@ -1,0 +1,19 @@
+algoritmo "SOCOMC"
+var
+   SoC: Vetor [1..5] de Caractere
+   i, tot: inteiro
+   nome: caractere
+inicio
+   tot <- 0
+   Para i <- 1 ate 5 faca
+      Escreva("Escreva o nome: ")
+      leia (nome)
+      Se (copia(maiusc(nome),1, 1) = "C") entao
+         tot <- tot + 1
+         SoC[tot] <- nome
+      FimSe
+   FimPara
+   Para i <- 1 ate tot faca
+      EscrevaL(SoC[i])
+   FimPara
+fimalgoritmo
