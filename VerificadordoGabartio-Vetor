@@ -1,0 +1,38 @@
+algoritmo "CORRIGE PROVAS"
+var
+    nomes: vetor [1..3] de caractere
+    gabarito: vetor[1..5] de caractere
+    nota: vetor [1..3] de real
+    prova: vetor[1..5] de caractere
+    i: inteiro
+    s, m: real
+
+Procedimento CadastroGabarito()
+var
+    c: inteiro
+inicio
+    para c <- 1 ate 5 faca
+        EscrevaL("GABARITO")
+        EscrevaL("Quetão ", c)
+        leia(gabarito[c])
+    FimPara
+FimProcedimento
+Funcao CadastraProva(): Real
+var 
+    c: inteiro
+    notaFinal: real
+inicio
+    para c <- 1 ate 5 faca
+        EscrevaL("Questao ", c)
+        leia (prova[c])
+        se (Maiusc(prova[c]) = Maiusc(gabarito[c])) entao
+            notaFinal = notaFinal + 2
+        FimSe
+    FimPara
+    retone notaFinal
+FimFuncao
+
+inicio
+
+    
+fimalgoritmo
