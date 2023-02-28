@@ -1,0 +1,34 @@
+algoritmo "TURMA"
+var
+   nome: Vetor [1..4] de Caractere
+   n1: Vetor [1..4] de Real
+   n2: Vetor [1..4] de Real
+   media: Vetor [1..4] de Real
+   i, TotAcima: Inteiro
+   MT, ST: Real
+inicio
+   ST <- 0
+   Para i <- 1 ate 4 faca
+      EscrevaL("ALUNO ", i)
+      Escreva ("Nome: ")
+      leia(nome[i])
+      Escreva("Primeira Nota: ")
+      leia(n1[i])
+      Escreva("Segunda Nota: ")
+      leia(n2[i])
+      media[i] <- (n1[i]+ n2[i]) / 2
+      ST <- ST + media[i]
+   FimPara
+      MT <- ST / 4
+      LimpaTela
+      EscrevaL("LISTAGEM DOS ALUNOS")
+      Para i <- 1 ate 4 faca
+         EscrevaL("ALUNO ", i, " : ", nome[i])
+         escrevaL("Nota 1: ", n1[i], " e Nota 2: ", n2[i])
+         escrevaL("Media do ", nome[i], " é de ", media[i]:3:1)
+         Se media[i]>MT entao
+            TotAcima <- TotAcima + 1
+         FimSe
+      FimPara
+      Escreva("Tem ", TotAcima, " alunos acima de media da turma que é ", MT:3:1)
+fimalgoritmo
