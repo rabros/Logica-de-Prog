@@ -12,27 +12,43 @@ var
     c: inteiro
 inicio
     para c <- 1 ate 5 faca
-        EscrevaL("GABARITO")
-        EscrevaL("Quetão ", c)
+        EscrevaL("CADASTRO DO GABARITO")
+        EscrevaL("Questão ", c, ":")
         leia(gabarito[c])
+        LimpaTela
     FimPara
 FimProcedimento
 Funcao CadastraProva(): Real
-var 
+var
     c: inteiro
     notaFinal: real
 inicio
+    notaFinal <- 0
     para c <- 1 ate 5 faca
-        EscrevaL("Questao ", c)
+        EscrevaL("RESPOSTA DO ALUNO")
+        EscrevaL("Questao: ", c)
         leia (prova[c])
         se (Maiusc(prova[c]) = Maiusc(gabarito[c])) entao
-            notaFinal = notaFinal + 2
+           notaFinal <- notaFinal + 2
         FimSe
     FimPara
-    retone notaFinal
+    retorne notaFinal
 FimFuncao
 
 inicio
+    CadastroGabarito()
+    Para i <- 1 ate 3 faca
+        EscrevaL("Digite o nome: ")
+        leia (nomes[i])
+        nota[i] <- CadastraProva()
+        s <- s + nota[i]
+        Limpatela
+    FimPara
 
-    
+    LimpaTela
+    Para i <- 1 ate 3 faca
+        EscrevaL("Aluno: ", nomes[i], " | Nota: ", nota[i])
+    FimPara
+    m <- s / 3
+    Escreva ("Media da turma ", m:4:2)
 fimalgoritmo
