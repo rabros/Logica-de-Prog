@@ -22,6 +22,7 @@ FimProcedimento
    
 inicio
    Repita
+      LimpaTela
       Fileira()
       
       EscrevaL ("Quer continuar? [S/N]")
