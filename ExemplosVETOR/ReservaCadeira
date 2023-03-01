@@ -1,0 +1,30 @@
+algoritmo "VAGA DE CADEIRA DE CINEMA"
+var
+   i: inteiro
+   assento: vetor [1..10] de caractere
+   Resp : Caractere
+   
+Procedimento Fileira()
+var
+   c: inteiro
+inicio
+   Para c <- 1 ate 10 faca
+      Se (assento[c] = "") entao
+         Escreva("[ B ", c, " ]")
+      senao
+         Escreva("[ --- ] ")
+      Fimse
+   FimPara
+   Escreval()
+   EscrevaL("-------------------------------------------------------------")
+FimProcedimento
+   
+   
+inicio
+   Repita
+      Fileira()
+      
+      EscrevaL ("Quer continuar? [S/N]")
+      Leia (Resp)
+   Até Resp = "N"
+fimalgoritmo
