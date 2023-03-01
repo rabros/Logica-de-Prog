@@ -17,7 +17,7 @@ inicio
         leia(gabarito[c])
         LimpaTela
     FimPara
-FimProcedimento
+FimProcedimento 
 Funcao CadastraProva(): Real
 var
     c: inteiro
