@@ -3,7 +3,8 @@ var
    i: inteiro
    assento: vetor [1..10] de caractere
    Resp : Caractere
-   
+   cadeira: inteiro
+
 Procedimento Fileira()
 var
    c: inteiro
@@ -18,14 +19,23 @@ inicio
    Escreval()
    EscrevaL("-------------------------------------------------------------")
 FimProcedimento
-   
-   
+
+
 inicio
    Repita
       LimpaTela
       Fileira()
-      
+      Escreva ("Qual assento quer reservar? B")
+      leia(cadeira)
+      Se assento[cadeira] = "R" entao
+         Limpatela
+         Fileira()
+         EscrevaL("ERROR:  CADEIRA RESERVADA")
+      FimSe
+      assento[cadeira] <- "R"
       EscrevaL ("Quer continuar? [S/N]")
       Leia (Resp)
-   Até Resp = "N"
+   Até maiusc(Resp) = "N"
+      LimpaTela
+      Fileira()
 fimalgoritmo
