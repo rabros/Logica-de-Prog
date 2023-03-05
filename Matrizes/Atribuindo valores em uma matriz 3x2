@@ -1,0 +1,17 @@
+algoritmo "semnome"
+var
+   m: vetor[1..3,1..2] de inteiro
+   l,c: inteiro
+inicio
+   Para l <- 1 até 3 faca
+      para c <- 1 até 2 faca
+         leia(m[l,c])
+      FimPara
+   FimPara
+   LimpaTela
+   Para l <- 1 até 3 faca
+      para c <- 1 até 2 faca
+         EscrevaL("linha ", l, " coluna ", c, " valor ", m[l,c])
+      FimPara
+   FimPara
+fimalgoritmo
