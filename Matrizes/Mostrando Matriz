@@ -1,0 +1,93 @@
+algoritmo "MATRIZ 4X4 COM OPÇÕES"
+var
+   MAT: vetor [1..4,1..4] de inteiro
+   i,j, resp: inteiro
+
+Procedimento mostrar_matriz()
+var
+   l, c: inteiro
+inicio
+   Para l <- 1 ate 4 faca
+      Para c <- 1 ate 4 faca
+         Escreva (MAT[l,c]:4)
+      FimPara
+      EscrevaL()
+   FimPara
+FimProcedimento
+
+Procedimento mostrar_matriz_DP()
+var
+   l, c: inteiro
+inicio
+   Para l <- 1 ate 4 faca
+      EscrevaL (MAT[l,l]:4)
+      Para c <- 1 ate l faca
+         Escreva("    ")
+      FimPara
+   FimPara
+FimProcedimento
+
+Procedimento mostrar_matriz_SUP()
+var
+   l, c, t: inteiro
+inicio
+   Para l <- 1 ate 3 faca
+      Escreva("    ")
+      Para c <- l+1 ate 4 faca
+         Escreva (MAT[l,c]:4)
+      FimPara
+      EscrevaL()
+      Para t <- 1 até l faca
+         Escreva("    ")
+      FimPara
+   FimPara
+   Escreval()
+FimProcedimento
+
+Procedimento mostrar_matriz_INF()
+var
+   l, c: inteiro
+inicio
+   Para l <- 2 ate 4 faca
+      Escreval()
+      Para c <- 1 ate l-1 faca
+         Escreva (MAT[l,c]:4)
+      FimPara
+   FimPara
+   EscrevaL()
+FimProcedimento
+
+inicio
+   Para i <- 1 ate 4 faca
+      Para j <- 1 ate 4 faca
+         Leia(MAT[i,j])
+      FimPara
+   FimPara
+   Limpatela
+   Repita
+      EscrevaL()
+      EscrevaL("MENU DE OPCOES")
+      EscrevaL("====================")
+      EscrevaL("[1] Mostrar a Matriz")
+      EscrevaL("[2] Diagonal Principal")
+      EscrevaL("[3] Triangulo Superior")
+      EscrevaL("[4] Triangulo Inferior")
+      EscrevaL("[5] Sair")
+      Repita
+        Leia (resp)
+      Até (resp >= 1) e (resp <=5)
+      LimpaTela
+       Escolha resp
+           Caso 1
+           mostrar_matriz()
+           Caso 2
+           mostrar_matriz_DP()
+           Caso 3
+           mostrar_matriz_SUP()
+           Caso 4
+           mostrar_matriz_INF()
+           Caso 5
+           Escreva ("ENCERRANDO...")
+        FimEscolha
+   Até resp = 5
+fimalgoritmo
