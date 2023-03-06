@@ -1,0 +1,106 @@
+algoritmo "JOGO DA VELHA"
+var
+   v: vetor [1..3,1..3] de caractere
+   i, j, cont, po: inteiro
+   simb: caractere
+   r: logico
+   
+Procedimento mostrar_jogo()
+Inicio
+   Para i <- 1 ate 3 faca
+      Para j <- 1 ate 3 faca
+          Escreva(v[i, j]:3)
+      FimPara
+      EscrevaL
+   FimPara
+FimProcedimento
+
+Procedimento mudar_player()
+Inicio
+   Se simb = "X" entao
+      simb <- "O"
+   senao
+      simb <- "X"
+   FimSe
+FimProcedimento
+
+funcao jogar(S: caractere; P: inteiro): logico
+var
+   mudou: logico
+inicio
+   mudou <- falso
+   Para i <- 1 ate 3 faca
+      Para j <- 1 ate 3 faca
+         Se (v[i,j] = numpcarac(P)) entao
+            v[i,j] <- S
+            mudou <- verdadeiro
+         FimSe
+      FimPara
+   FimPara
+   retorne mudou
+FimFuncao
+
+Funcao terminou_jogo():logico
+var
+   velha: inteiro
+   terminou: logico
+Inicio
+   terminou <- falso
+   // LINHAS
+   Para i <- 1 ate 3 faca
+      Se (v[i,1] = v[i,2]) e (v[i,1] = v[i,3]) entao
+         terminou <- verdadeiro
+      FimSe
+   FimPara
+   // COLUNAS
+   Para j <- 1 ate 3 faca
+      Se (v[1,j] = v[2,j]) e (v[1,j] = v[3,j]) entao
+         terminou <- verdadeiro
+      FimSe
+   FimPara
+   // DIAGONAL
+   Se (v[1,1] = v[2,2]) e (v[3,3] = v[1,1]) entao
+      terminou <- verdadeiro
+   FimSe
+   
+   velha <- 0
+   Para i <- 1 ate 3 faca
+      Para j <- 1 ate 3 faca
+         Se (v[i,j] <> "X") e (v[i,j] <> "O") entao
+            velha <- velha + 1
+         FimSe
+      FimPara
+   FimPara
+   Se velha = 0 entao
+      terminou <- verdadeiro
+   FimSe
+   retorne terminou
+   
+FimFuncao
+
+inicio
+   cont <- 1
+   simb <- "X"
+   Para i <- 1 ate 3 faca
+      Para j <- 1 ate 3 faca
+         v[i, j] <- numpcarac(cont)
+         cont <- cont + 1
+      FimPara
+   FimPara
+   mostrar_jogo
+   Repita
+      Repita
+         EscrevaL ("qual posição [",simb,"] vai escolher?")
+         leia (po)
+         r <- jogar(simb, po)
+         Se r = falso entao
+           EscrevaL("JOGADA INVALIDA")
+         FimSe
+      Até r = verdadeiro
+      mudar_player()
+      Limpatela
+      mostrar_jogo
+   Até (terminou_jogo() = verdadeiro)
+   EscrevaL("JOGO FINALIZADO")
+   
+fimalgoritmo
