@@ -1,0 +1,37 @@
+algoritmo "MATRIZ IDENTIDADE"
+var
+   MI: vetor[1..4,1..4] de inteiro
+   i, j, Soma_DP, Prod_2a, maior_3C: inteiro
+inicio
+   Soma_DP <- 0
+   Prod_2a <- 1
+   Para i <- 1 ate 4 faca
+      Para j <- 1 ate 4 faca
+         Leia(MI[i, j])
+      FimPara
+   FimPara
+   
+   LimpaTela
+   Para i <- 1 ate 4 faca
+      Para j <- 1 ate 4 faca
+         Escreva(MI[i,j]:5)
+         Se i = j entao
+            Soma_DP <- Soma_DP + MI[i,j]
+         FimSe
+      FimPara
+      Escreval()
+   FimPara
+   Para j <- 1 até 4 faca
+      Prod_2a <- Prod_2a * MI[2,j]
+   FimPara
+   
+   Para i <- 1 até 4 faca
+      Se MI[i, 3] > maior_3C entao
+         maior_3C <- MI[i, 3]
+      FimSe
+   FimPara
+   
+   EscrevaL("A soma da Diagonal Principal é ", Soma_DP)
+   EscrevaL("O maior numero da 3ª Coluna é ", maior_3C)
+   Escreva("O produto da Segunda Linha é ", Prod_2a)
+fimalgoritmo
