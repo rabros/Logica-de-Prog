@@ -1,0 +1,23 @@
+algoritmo "MATRIZ IDENTIDADE"
+var
+   MI: vetor[1..4,1..4] de inteiro
+   i, j, Soma_DP: inteiro
+inicio
+   Soma_DP <- 0
+   Para i <- 1 ate 4 faca
+      Para j <- 1 ate 4 faca
+         Leia(MI[i, j])
+      FimPara
+   FimPara
+   LimpaTela
+   Para i <- 1 ate 4 faca
+      Para j <- 1 ate 4 faca
+         Escreva(MI[i,j]:5)
+         Se i = j entao
+            Soma_DP <- Soma_DP + MI[i,j]
+         FimSe
+      FimPara
+      Escreval()
+   FimPara
+   Escreva("A soma da Diagonal Principal é ", Soma_DP)
+fimalgoritmo
